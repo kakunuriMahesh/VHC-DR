@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { saveToSheet } from './services/sheetService'
+import { FiMapPin, FiPhone, FiClock, FiCheck, FiX } from 'react-icons/fi'
 
 const DiabetesPage = () => (
   <div className="min-h-screen bg-[#fafaf8] pt-[68px]">
@@ -126,7 +127,12 @@ function MainApp() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [formData, setFormData] = useState({ name: '', phone: '', ReasonForVisit: '', message: '' })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [toast, setToast] = useState<{ show: boolean; type: 'success' | 'error'; message: string }>({ show: false, type: 'success', message: '' })
+
+  const showToast = (type: 'success' | 'error', message: string) => {
+    setToast({ show: true, type, message })
+    setTimeout(() => setToast({ show: false, type: 'success', message: '' }), 4000)
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -159,16 +165,13 @@ function MainApp() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setSubmitStatus('idle')
     try {
       await saveToSheet(e.currentTarget)
-      setSubmitStatus('success')
+      showToast('success', 'Appointment request submitted! We will call you soon.')
       setFormData({ name: '', phone: '', ReasonForVisit: '', message: '' })
-      setTimeout(() => setSubmitStatus('idle'), 3000)
     } catch (error) {
       console.error(error)
-      setSubmitStatus('error')
-      setTimeout(() => setSubmitStatus('idle'), 3000)
+      showToast('error', 'Failed to submit. Please try again or call us directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -215,6 +218,20 @@ function MainApp() {
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">{mobileMenuOpen ? <path d="M18 6L6 18M6 6l12 12"/> : <path d="M3 12h18M3 6h18M3 18h18"/>}</svg>
         </button>
       </nav>
+      
+      {/* Toast Notification */}
+      {toast.show && (
+        <div className={`fixed top-20 left-1/2 -translate-x-1/2 z-50 px-5 py-3 rounded-lg shadow-xl flex items-center gap-3 animate-bounce ${
+          toast.type === 'success' ? 'bg-green-600' : 'bg-red-600'
+        }`}>
+          {toast.type === 'success' ? (
+            <FiCheck className="w-5 h-5 text-white" />
+          ) : (
+            <FiX className="w-5 h-5 text-white" />
+          )}
+          <span className="text-white text-sm font-medium">{toast.message}</span>
+        </div>
+      )}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div className="absolute inset-0 bg-black/50" onClick={() => setMobileMenuOpen(false)}></div>
@@ -585,9 +602,24 @@ function MainApp() {
             <div className="fade-up opacity-0 translate-y-7 transition-all duration-700">
               <h3 className="text-[16px] md:text-[18px] font-semibold text-[#1a1a1a] mb-5 md:mb-6">Clinic Details</h3>
               <div className="space-y-4">
-                <div className="flex items-start gap-3"><div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center text-[#0d6e6e] flex-shrink-0">📍</div><div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Address</h4><p className="text-[13px] text-[#5a5a5a]">Vedic Health Clinic<br/>PM Palem, Madhurawada<br/>Visakhapatnam, AP</p></div></div>
-                <div className="flex items-start gap-3"><div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center text-[#0d6e6e] flex-shrink-0">📞</div><div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Phone</h4><p className="text-[13px] text-[#5a5a5a]"><a href="tel:+919948494455" className="hover:text-[#0d6e6e]">99484 94455</a>, <a href="tel:+919080988450" className="hover:text-[#0d6e6e]">9080 988450</a></p></div></div>
-                <div className="flex items-start gap-3"><div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center text-[#0d6e6e] flex-shrink-0">🕐</div><div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Timings</h4><p className="text-[13px] text-[#5a5a5a]">Mon–Sat: 9AM–1PM, 5PM–9PM</p></div></div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FiMapPin className="w-4 h-4 text-[#0d6e6e]" />
+                  </div>
+                  <div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Address</h4><p className="text-[13px] text-[#5a5a5a]">Vedic Health Clinic<br/>PM Palem, Madhurawada<br/>Visakhapatnam, AP</p></div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FiPhone className="w-4 h-4 text-[#0d6e6e]" />
+                  </div>
+                  <div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Phone</h4><p className="text-[13px] text-[#5a5a5a]"><span className="font-medium">Reception</span> - <a href="tel:+919948494455" className="hover:text-[#0d6e6e]">99484 94455</a><br/><span className="font-medium">Dr. Ram</span> - <a href="tel:+919080988450" className="hover:text-[#0d6e6e]">9080 988450</a></p></div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FiClock className="w-4 h-4 text-[#0d6e6e]" />
+                  </div>
+                  <div><h4 className="text-[13px] font-semibold text-[#1a1a1a]">Timings</h4><p className="text-[13px] text-[#5a5a5a]">Mon–Sat: 9AM–1PM, 5PM–9PM</p></div>
+                </div>
               </div>
               <div className="bg-[#e6f4f4] rounded-lg h-[180px] md:h-[220px] lg:h-[250px] mt-4 md:mt-6 border border-[#c2e0e0] overflow-hidden">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d949.6868846690519!2d83.3482547!3d17.8035584!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f6669f88970ab9%3A0x278beeccdf51d7aa!2sVedic%20Health%20Clinic%20%26%20Diabetes%20Centre!5e0!3m2!1sen!2sin!4v1777006284228!5m2!1sen!2sin" width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Clinic Location"></iframe>
