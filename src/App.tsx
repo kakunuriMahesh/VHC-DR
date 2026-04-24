@@ -264,31 +264,29 @@ function MainApp() {
       </section>
 
       {/* TRUST BAR */}
-      <div className="bg-white border-b border-[#e0e8e8] px-5 md:px-8 lg:px-10 py-4 md:py-5 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-10">
-        <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a]">
-          <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      <div className="bg-white border-b border-[#e0e8e8] overflow-hidden">
+        <div className="px-5 md:px-8 lg:px-10 py-4 md:py-5 flex items-center gap-6 md:gap-8 lg:gap-10 overflow-x-auto scrollbar-hide">
+          <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
+            <img src="/assets/MDGeneralMedicine.png" alt="MD" className="w-8 h-8 object-contain" />
+            <span>MD – General Medicine</span>
           </div>
-          <span>MD – General Medicine, AIIMS-affiliated</span>
-        </div>
-        <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a]">
-          <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
+            <img src="/assets/CertifiedDiabetes.png" alt="Certified" className="w-8 h-8 object-contain" />
+            <span>Certified Diabetes & Kidney Specialist</span>
           </div>
-          <span>Certified Diabetes & Kidney Specialist</span>
-        </div>
-        <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a]">
-          <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
+            <img src="/assets/5Years.png" alt="Experience" className="w-8 h-8 object-contain" />
+            <span>10+ Years Clinical Experience</span>
           </div>
-          <span>5+ Years Clinical Experience</span>
-        </div>
-        <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a]">
-          <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
+            <img src="/assets/Academic.png" alt="Academic" className="w-8 h-8 object-contain" />
+            <span>Academic & Clinical Expertise</span>
           </div>
-          <span>Academic & Clinical Expertise</span>
         </div>
+        <style>{`
+          .scrollbar-hide::-webkit-scrollbar { display: none; }
+          .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        `}</style>
       </div>
 
       {/* ABOUT */}
