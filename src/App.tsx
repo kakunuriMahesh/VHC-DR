@@ -232,7 +232,7 @@ function MainApp() {
       )}
 
       {/* HERO - matching left (text) + right (image) layout from HTML */}
-      <section id="home" className="min-h-screen pt-[56px] md:pt-[68px] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+      {/* <section id="home" className="min-h-screen pt-[56px] md:pt-[68px] overflow-hidden grid grid-cols-1 lg:grid-cols-2">
         <div className="bg-[#094f4f] px-5 md:px-8 lg:px-10 xl:px-20 py-10 md:py-16 lg:py-20 flex flex-col justify-center relative overflow-hidden">
           <div className="hidden md:block absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full bg-white/[0.03] -top-[80px] -left-[80px]"></div>
           <div className="hidden md:block absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full bg-[#b5893a]/[0.08] bottom-[40px] -right-[60px]"></div>
@@ -251,17 +251,95 @@ function MainApp() {
         <div className="hidden lg:flex bg-[#e6f4f4] items-stretch relative">
           <img src="/assets/HeroImg.jpeg" alt="Vedic Health Clinic" className="w-full h-full object-cover" />
           <div className="absolute bottom-4 right-4 flex flex-col gap-3">
-            <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-right">
+            <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-left">
               <div className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">5+</div>
               <div className="text-xs text-[#8a8a8a] uppercase tracking-widest">Years Experience</div>
             </div>
-            <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-right">
+            <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-left">
               <h2 className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">MD</h2>
               <div className="text-xs text-[#8a8a8a] uppercase tracking-widest">General Medicine</div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section
+  id="home"
+  className="h-[calc(100vh)] overflow-hidden grid grid-cols-1 lg:grid-cols-2"
+>
+  {/* LEFT SIDE */}
+  <div className="bg-[#094f4f] px-5 md:px-8 lg:px-10 xl:px-20 py-6 md:py-8 flex flex-col justify-center relative overflow-hidden">
+    
+    {/* Background circles */}
+    <div className="hidden md:block absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full bg-white/[0.03] -top-[80px] -left-[80px]"></div>
+    <div className="hidden md:block absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full bg-[#b5893a]/[0.08] bottom-[40px] -right-[60px]"></div>
+
+    {/* Content */}
+    <div className="flex items-center gap-3 text-[#b5893a] text-xs font-medium uppercase tracking-widest mb-4">
+      <span className="w-8 h-[1px] bg-[#b5893a]"></span>
+      Consultant Physician & Diabetologist
+    </div>
+
+    <h1 className="text-[30px] md:text-[36px] lg:text-[44px] font-semibold text-white mb-2 leading-tight">
+      Dr. Barla<br />Dasaradha Ram
+    </h1>
+
+    <p className="text-[13px] md:text-[14px] text-[#c2e0e0] mb-4">
+      MD (General Medicine) · Vedic Health Clinic, Visakhapatnam
+    </p>
+
+    <p className="text-[14px] md:text-[16px] text-white/70 leading-relaxed mb-5 max-w-[420px]">
+      Expert care for diabetes, hypertension, thyroid disorders, and chronic medical conditions — with evidence-based treatment and a focus on long-term health.
+    </p>
+
+    {/* Buttons */}
+    <div className="flex flex-col sm:flex-row gap-3">
+      <a
+        href="#contact"
+        onClick={(e) => handleNavClick(e, "#contact")}
+        className="bg-[#b5893a] text-white px-5 py-3 rounded text-[13px] font-semibold tracking-wide hover:bg-[#a07530] transition-all text-center"
+      >
+        Book Appointment
+      </a>
+
+      <a
+        href="tel:+919948494455"
+        className="border border-white/40 text-white px-5 py-3 rounded text-[13px] font-medium tracking-wide hover:bg-white/10 transition-all text-center"
+      >
+        Call Clinic
+      </a>
+    </div>
+  </div>
+
+  {/* RIGHT SIDE */}
+  <div className="hidden lg:flex bg-[#e6f4f4] items-stretch relative">
+    <img
+      src="/assets/HeroImg.jpeg"
+      alt="Vedic Health Clinic"
+      className="w-full h-full object-cover"
+    />
+
+    {/* Cards */}
+    <div className="absolute bottom-[200px] right-4 flex gap-3">
+      <div className="bg-white rounded-lg px-4 py-2 shadow-lg">
+        <div className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">
+          5+
+        </div>
+        <div className="text-xs text-[#8a8a8a] uppercase tracking-widest">
+          Years Experience
+        </div>
+      </div>
+
+      <div className="bg-white rounded-lg px-4 py-2 shadow-lg">
+        <h2 className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">
+          MD
+        </h2>
+        <div className="text-xs text-[#8a8a8a] uppercase tracking-widest">
+          General Medicine
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* TRUST BAR */}
       <div className="bg-white border-b border-[#e0e8e8] overflow-hidden">
