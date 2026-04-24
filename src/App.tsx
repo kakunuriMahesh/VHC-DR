@@ -392,10 +392,10 @@ function MainApp() {
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive care for chronic and acute medical conditions.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {conditions.map((item, i) => (
-              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 border border-[#e0e8e8] rounded-lg p-5 md:p-7 hover:border-[#0d6e6e] hover:shadow-lg hover:-translate-y-0.5">
-                <div className="w-10 md:w-12 h-10 md:h-12 mb-3 md:mb-4">{item.icon}</div>
-                <h3 className="text-[14px] md:text-[17px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[15px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
+              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-[#e6f4f4] rounded-lg p-6 md:p-8 hover:bg-[#d4eaea] hover:shadow-lg hover:-translate-y-1">
+                <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-5">{item.icon}</div>
+                <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
+                <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -453,10 +453,10 @@ function MainApp() {
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {services.map((item, i) => (
-              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-white border border-[#e0e8e8] rounded-lg p-5 md:p-7">
-                <div className="text-[32px] md:text-[42px] font-semibold text-[#c2e0e0] leading-none mb-3">{item.num}</div>
-                <h3 className="text-[14px] md:text-[17px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[15px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
+              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-[#f0f7f7] rounded-lg p-6 md:p-8 hover:bg-[#e6f4f4] hover:shadow-lg hover:-translate-y-1">
+                <div className="text-[38px] md:text-[48px] font-semibold text-[#c2e0e0] leading-none mb-4">{item.num}</div>
+                <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
+                <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
