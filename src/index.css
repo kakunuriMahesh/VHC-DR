@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #0d6e6e;
+  --color-teal-dark: #094f4f;
+  --color-teal-light: #e6f4f4;
+  --color-teal-mid: #c2e0e0;
+  --color-gold: #b5893a;
+  --color-gold-light: #f7f0e3;
+  --color-text: #1a1a1a;
+  --color-text-muted: #5a5a5a;
+  --color-text-light: #8a8a8a;
+  --color-bg: #fafaf8;
+  --color-white: #ffffff;
+  --color-border: #e0e8e8;
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-body bg-bg text-text text-base leading-relaxed;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-heading;
+    line-height: 1.2;
+    /* font-family:'DM Sans', sans-serif; */
+    font-family:'Cormorant Garamond', serif;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll:active {
+  animation-play-state: paused;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
