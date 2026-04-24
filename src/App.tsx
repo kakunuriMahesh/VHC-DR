@@ -6,6 +6,13 @@ import DiabetesPage from './pages/DiabetesPage'
 import HypertensionPage from './pages/HypertensionPage'
 import FeverPage from './pages/FeverPage'
 import GastroenterologyPage from './pages/GastroenterologyPage'
+import BlogPage from './pages/BlogPage'
+import AboutPage from './pages/AboutPage'
+import ConditionsPage from './pages/ConditionsPage'
+import ServicesPage from './pages/ServicesPage'
+import ProfilePage from './pages/ProfilePage'
+import EducationPage from './pages/EducationPage'
+import ContactPage from './pages/ContactPage'
 
 function MainApp() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -96,6 +103,7 @@ const services = [
           <li><a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="text-sm font-medium text-[#5a5a5a] hover:text-[#0d6e6e] transition-colors">Services</a></li>
           <li><a href="#profile" onClick={(e) => handleNavClick(e, '#profile')} className="text-sm font-medium text-[#5a5a5a] hover:text-[#0d6e6e] transition-colors">Profile</a></li>
           <li><a href="#education-tiles" onClick={(e) => handleNavClick(e, '#education-tiles')} className="text-sm font-medium text-[#5a5a5a] hover:text-[#0d6e6e] transition-colors">Education</a></li>
+          <li><a href="#/blog" className="text-sm font-medium text-[#5a5a5a] hover:text-[#0d6e6e] transition-colors">Blog</a></li>
           <li><a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="bg-[#0d6e6e] text-white px-4 md:px-5 py-1.5 md:py-2 rounded text-[12px] md:text-[13px] font-semibold tracking-wide hover:bg-[#094f4f] transition-colors">Book Appointment</a></li>
         </ul>
         <button className="lg:hidden p-2 text-[#094f4f]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -126,6 +134,7 @@ const services = [
               <li><a href="#services" onClick={(e) => handleNavClick(e, '#services')} className="block text-base font-medium text-[#5a5a5a] py-2">Services</a></li>
               <li><a href="#profile" onClick={(e) => handleNavClick(e, '#profile')} className="block text-base font-medium text-[#5a5a5a] py-2">Profile</a></li>
               <li><a href="#education-tiles" onClick={(e) => handleNavClick(e, '#education-tiles')} className="block text-base font-medium text-[#5a5a5a] py-2">Education</a></li>
+              <li><a href="#/blog" className="block text-base font-medium text-[#5a5a5a] py-2">Blog</a></li>
               <li><a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="block bg-[#0d6e6e] text-white text-center px-5 py-3 rounded text-sm font-semibold">Book Appointment</a></li>
             </ul>
           </div>
@@ -550,6 +559,13 @@ const router = createHashRouter([
   { path: '/hypertension', element: <HypertensionPage /> },
   { path: '/fever', element: <FeverPage /> },
   { path: '/gastroenterology', element: <GastroenterologyPage /> },
+  { path: '/blog', element: <BlogPage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/conditions', element: <ConditionsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/profile', element: <ProfilePage /> },
+  { path: '/education', element: <EducationPage /> },
+  { path: '/contact', element: <ContactPage /> },
 ])
 
 export default function App() {
