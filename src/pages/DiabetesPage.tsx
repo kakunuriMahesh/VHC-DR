@@ -9,8 +9,8 @@ export default function DiabetesPage() {
       <Navbar />
       <div className="flex-1 pt-[68px] bg-[#fafaf8]">
         <div className="container py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 max-w-[1120px] mx-auto">
-          <a href="#/education-tiles" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70">
-            <span>←</span> Back to Education
+          <a href="#/" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70">
+            <span>←</span> Back
           </a>
           <div className="section-label">Patient Education</div>
           <h1 className="section-title">Diabetes: Understanding<br/>Your Condition</h1>
