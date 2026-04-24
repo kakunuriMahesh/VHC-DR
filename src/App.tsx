@@ -252,7 +252,7 @@ function MainApp() {
           <img src="/assets/HeroImg.jpeg" alt="Vedic Health Clinic" className="w-full h-full object-cover" />
           <div className="absolute bottom-4 right-4 flex flex-col gap-3">
             <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-right">
-              <div className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">10+</div>
+              <div className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">5+</div>
               <div className="text-xs text-[#8a8a8a] uppercase tracking-widest">Years Experience</div>
             </div>
             <div className="bg-white rounded-lg px-4 py-2.5 shadow-lg text-right">
@@ -281,7 +281,7 @@ function MainApp() {
           <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <span>10+ Years Clinical Experience</span>
+          <span>5+ Years Clinical Experience</span>
         </div>
         <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a]">
           <div className="w-8 h-8 bg-[#e6f4f4] rounded-full flex items-center justify-center flex-shrink-0">
@@ -299,18 +299,11 @@ function MainApp() {
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">A physician who combines clinical precision with genuine patient care.</p>
           
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 lg:gap-20">
-            <div className="hidden lg:flex bg-[#e6f4f4] rounded-lg aspect-[3/4] items-center justify-center flex-col gap-3.5 text-[#0d6e6e] text-sm">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-              </svg>
-              <span style={{fontSize: '13px', opacity: 0.5}}>Doctor Photo Here</span>
-            </div>
-            
             <div className="space-y-4 text-[14px] md:text-[16px] text-[#5a5a5a] leading-[1.85]">
-              <p>Dr. Barla Dasaradha Ram is a Consultant Physician and Diabetologist based at Vedic Health Clinic, Visakhapatnam. With over a decade of clinical and academic experience, he specializes in the management of diabetes, hypertension, thyroid disorders, and complex chronic medical conditions.</p>
-              <p>He completed his MD in General Medicine from Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pune, and holds a CCEBDM certification in Evidence-Based Diabetes Management and a CCCKD certification in Chronic Kidney Disease Management.</p>
-              <p>In addition to clinical practice, Dr. Ram has served as Assistant Professor in the Department of General Medicine at GITAM Institute of Medical Sciences, Visakhapatnam — contributing actively to both education and patient care.</p>
-              <p>His approach to medicine is straightforward: accurate diagnosis, rational treatment, clear patient communication, and continuous follow-up to ensure long-term disease control.</p>
+              <p className="text-[15px] md:text-[17px] text-[#1a1a1a] font-semibold">Dr. Barla Dasaradha Ram, MD (General Medicine)<br/><span className="font-normal text-[#5a5a5a]">Consultant Physician | Special Interest in Diabetes & Metabolic Medicine</span></p>
+              <p>Dr. Barla Dasaradha Ram is a Consultant Physician at Vedic Health Clinic, PM Palem, Visakhapatnam, with focused expertise in diabetes, hypertension, thyroid disorders, and metabolic disease management.</p>
+              <p>He completed his MD in General Medicine from Dr. D.Y. Patil Medical College, Hospital & Research Centre, Pune, and holds advanced certifications in Evidence-Based Diabetes Management (CCEBDM) and Chronic Kidney Disease Management (CCCKD). He has also served as Assistant Professor in the Department of General Medicine at GITAM Institute of Medical Sciences, Visakhapatnam.</p>
+              <p>His practice at Vedic Health Clinic is built around structured, protocol-driven care — precise diagnosis, rational prescribing, and sustained follow-up — with a strong emphasis on preventing long-term complications of diabetes, hypertension, and metabolic disease.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-9">
                 <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
@@ -319,18 +312,22 @@ function MainApp() {
                 </div>
                 <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
                   <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Certifications</h4>
-                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">CCEBDM · CCCKD</p>
+                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">CCEBDM <br/> CCCKD</p>
                 </div>
                 <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
                   <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Academic Role</h4>
-                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Assistant Professor – General Medicine, GITAM IMS</p>
+                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Assistant Professor – General Medicine, GIMSR</p>
                 </div>
                 <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
                   <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Clinic</h4>
-                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Vedic Health Clinic, Visakhapatnam</p>
+                  <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Vedic Health Clinic, PM Palem, Visakhapatnam</p>
                 </div>
               </div>
             </div>
+            <div className="hidden lg:block bg-[#e6f4f4] rounded-lg overflow-hidden">
+              <img src="/assets/HeroImg.jpeg" alt="Dr. Barla Dasaradha Ram" className="w-full h-full object-cover" />
+            </div>
+            
           </div>
         </div>
       </section>
