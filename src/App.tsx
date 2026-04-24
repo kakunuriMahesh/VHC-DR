@@ -225,7 +225,7 @@ const services = [
     <img
       src="/assets/HeroImg.jpeg"
       alt="Vedic Health Clinic"
-      className="w-full h-full object-cover"
+      className="w-full h-full object-cover object-bottom"
     />
 
     {/* Cards */}
@@ -350,6 +350,32 @@ const services = [
                 <div className="text-[38px] md:text-[48px] font-semibold text-[#094f4f] leading-none mb-4">{item.num}</div>
                 <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10" style={{ background: '#094f4f' }}>
+        <div className="max-w-[1120px] mx-auto">
+          <div className="flex items-center gap-3 text-[#b5893a] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#b5893a]"></span>Why Choose Us</div>
+          <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-white mb-3 md:mb-4">What Makes Vedic Health<br/>Clinic Different</h2>
+          <p className="text-[14px] md:text-[17px] text-white/65 max-w-[520px] leading-relaxed mb-10 md:mb-13">Our approach to medicine is built on a few non-negotiable principles.</p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+            {[
+              { title: 'Evidence-Based Treatment', desc: 'Every diagnosis and prescription is rooted in current medical evidence, not habit or guesswork.' },
+              { title: 'Long-Term Disease Control', desc: 'We focus on sustained management — not just suppressing symptoms, but achieving real control over time.' },
+              { title: 'Clear Patient Communication', desc: 'You will always understand your condition, what your test results mean, and exactly why you are being treated a certain way.' },
+              { title: 'Rational Medication Use', desc: 'No unnecessary prescriptions. You receive what you actually need — nothing more, nothing less.' },
+              { title: 'Continuous Monitoring & Follow-up', desc: 'Chronic diseases need ongoing attention. We track progress systematically and adjust treatment accordingly.' },
+              { title: 'Academic-Level Clinical Knowledge', desc: 'With experience as both clinician and teacher, the level of care here reflects the depth of specialist training.' },
+            ].map((item, i) => (
+              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 rounded-xl p-5 md:p-6 hover:bg-white/10 border border-transparent hover:border-white/10">
+                <div className="text-[#b5893a] text-lg font-bold mb-2">✓</div>
+                <h3 className="text-[15px] md:text-[17px] font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-[13px] md:text-[14px] text-white/70 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
