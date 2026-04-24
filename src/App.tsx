@@ -175,12 +175,12 @@ function MainApp() {
   }
 
   const services = [
-    { num: '01', title: 'OPD Consultation', desc: 'Thorough evaluation, diagnosis, and treatment planning for acute and chronic medical conditions.' },
-    { num: '02', title: 'Diabetes Management Program', desc: 'Individualised diabetes care including medication, insulin therapy, diet guidance, and regular HbA1c monitoring.' },
-    { num: '03', title: 'Hypertension Care', desc: 'Blood pressure control with targeted treatment, cardiovascular risk reduction, and lifestyle counselling.' },
-    { num: '04', title: 'IV Treatment & Day Care', desc: 'Intravenous medications, fluid management, and day care procedures without the need for hospital admission.' },
-    { num: '05', title: 'Preventive Health Check-ups', desc: 'Comprehensive health screening to detect conditions early — including sugar, blood pressure, kidney, thyroid, and lipid tests.' },
-    { num: '06', title: 'Adult Vaccination', desc: 'Recommended adult vaccines including hepatitis, influenza, pneumococcal, typhoid, and others as clinically indicated.' },
+    { num: '01', title: 'OPD Consultation', desc: 'Every visit ends with a clear diagnosis, a written plan, and a doctor who actually explains what\'s happening — not just a prescription and a goodbye' },
+    { num: '02', title: 'Diabetes Management Program', desc: 'A structured, protocol-driven program — not just monthly prescriptions. HbA1c tracking, insulin optimisation, diet counselling, and complication screening built into every follow-up.' },
+    { num: '03', title: 'Hypertension Care', desc: 'BP control is the start, not the finish. We assess your full cardiovascular risk — heart, kidneys, vessels — and treat the person, not just the number.' },
+    { num: '04', title: 'IV Treatment & Day Care', desc: 'IV fluids, medications, and day procedures — managed safely at the clinic. Avoid unnecessary hospitalisation without compromising on care.' },
+    { num: '05', title: 'Preventive Health Check-ups', desc: 'Catch problems before they become crises. Sugar, BP, kidneys, thyroid, lipids — a full metabolic screen with a physician review, not just a lab report handed to you.' },
+    { num: '06', title: 'Adult Vaccination', desc: 'If you have diabetes or high BP, a simple infection can spiral fast. One visit at Vedic Health Clinic — we assess your vaccination gaps and cover you for hepatitis, pneumonia, flu, typhoid, and more. No referrals, no running around. Done here, same day.' },
   ]
 
   const conditions = [
