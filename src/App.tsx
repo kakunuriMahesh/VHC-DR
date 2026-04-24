@@ -265,7 +265,7 @@ function MainApp() {
 
       {/* TRUST BAR */}
       <div className="bg-white border-b border-[#e0e8e8] overflow-hidden">
-        <div className="px-5 md:px-8 lg:px-10 py-4 md:py-5 flex items-center gap-6 md:gap-8 lg:gap-10 overflow-x-auto scrollbar-hide">
+        <div className="px-5 md:px-8 lg:px-10 py-4 md:py-5 flex items-center md:justify-center gap-6 md:gap-8 lg:gap-10 overflow-x-auto scrollbar-hide">
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/MDGeneralMedicine.png" alt="MD" className="w-8 h-8 object-contain" />
             <span>MD – General Medicine</span>
@@ -288,6 +288,24 @@ function MainApp() {
           .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
         `}</style>
       </div>
+
+       {/* CONDITIONS */}
+      <section id="conditions" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-[#fafaf8]">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Conditions Treated</div>
+          <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">Areas of Expertise</h2>
+          <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive care for chronic and acute medical conditions.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
+            {conditions.map((item, i) => (
+              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 border border-[#e0e8e8] rounded-lg p-5 md:p-7 hover:border-[#0d6e6e] hover:shadow-lg hover:-translate-y-0.5">
+                <div className="w-10 md:w-12 h-10 md:h-12 mb-3 md:mb-4">{item.icon}</div>
+                <h3 className="text-[14px] md:text-[17px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
+                <p className="text-[12px] md:text-[15px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section id="about" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
@@ -330,23 +348,7 @@ function MainApp() {
         </div>
       </section>
 
-      {/* CONDITIONS */}
-      <section id="conditions" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-[#fafaf8]">
-        <div className="max-w-[1120px] mx-auto">
-          <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Conditions Treated</div>
-          <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">Areas of Expertise</h2>
-          <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive care for chronic and acute medical conditions.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
-            {conditions.map((item, i) => (
-              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 border border-[#e0e8e8] rounded-lg p-5 md:p-7 hover:border-[#0d6e6e] hover:shadow-lg hover:-translate-y-0.5">
-                <div className="w-10 md:w-12 h-10 md:h-12 mb-3 md:mb-4">{item.icon}</div>
-                <h3 className="text-[14px] md:text-[16px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[14px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* SERVICES */}
       <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
@@ -358,8 +360,8 @@ function MainApp() {
             {services.map((item, i) => (
               <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-white border border-[#e0e8e8] rounded-lg p-5 md:p-7">
                 <div className="text-[32px] md:text-[42px] font-semibold text-[#c2e0e0] leading-none mb-3">{item.num}</div>
-                <h3 className="text-[14px] md:text-[16px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[14px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
+                <h3 className="text-[14px] md:text-[17px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
+                <p className="text-[12px] md:text-[15px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
