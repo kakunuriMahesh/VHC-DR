@@ -384,31 +384,33 @@ function MainApp() {
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MD – General Medicine</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-1">Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pune</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MD – General Medicine <span className="text-[#b5893a] font-semibold ml-1">2021</span></div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pune</div>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
               </div>
               
-              <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
+              <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MBBS</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">Guntur Medical College & Government General Hospital (GGH), Guntur</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MBBS <span className="text-[#b5893a] font-semibold ml-1">2013</span></div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Guntur Medical College & Government General Hospital (GGH), Guntur</div>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
               </div>
               
-              <div className="mt-7 mb-2">
+              <div className="mt-8 mb-2">
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#094f4f]">Certifications</div>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCEBDM</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Evidence-Based Diabetes Management</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCCKD <span className="text-[#b5893a] font-semibold ml-1">2025</span></div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Chronic Kidney Disease Management</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCCKD</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Chronic Kidney Disease Management</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCEBDM <span className="text-[#b5893a] font-semibold ml-1">2023</span></div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Evidence-Based Diabetes Management</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
               </div>
             </div>
@@ -422,20 +424,21 @@ function MainApp() {
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Consultant Physician</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">Vedic Health Clinic, Visakhapatnam</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Consultant Physician <span className="text-[#b5893a] font-semibold ml-1">Since 2021</span></div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Vedic Health Clinic, PM Palem, Visakhapatnam</div>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Current</span>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Assistant Professor – General Medicine</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences, Rushikonda, Visakhapatnam</div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences and Research (GIMSR), Rushikonda Visakhapatnam</div>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Senior Resident – General Medicine</div>
-                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences, Rushikonda, Visakhapatnam</div>
+                <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences and Research (GIMSR), Rushikonda Visakhapatnam</div>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
