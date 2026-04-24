@@ -184,12 +184,12 @@ function MainApp() {
   ]
 
   const conditions = [
-    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> },
-    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> },
-    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg> },
-    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg> },
-    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><path d="M3 3h18v18H3z" rx="2"/><path d="M12 8v8M8 12h8"/></svg> },
-    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0d6e6e" strokeWidth="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg> },
+    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-11 h-11 object-contain" /> },
+    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-11 h-11 object-contain" /> },
+    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <img src="/assets/ThyroidDisorders.png" alt="Thyroid" className="w-11 h-11 object-contain" /> },
+    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-11 h-11 object-contain" /> },
+    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-11 h-11 object-contain" /> },
+    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-11 h-11 object-contain" /> },
   ]
 
   return (
