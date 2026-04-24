@@ -177,22 +177,22 @@ function MainApp() {
     }
   }
 
-  const services = [
-    { num: '01', title: 'OPD Consultation', desc: 'Every visit ends with a clear diagnosis, a written plan, and a doctor who actually explains what\'s happening — not just a prescription and a goodbye' },
-    { num: '02', title: 'Diabetes Management Program', desc: 'A structured, protocol-driven program — not just monthly prescriptions. HbA1c tracking, insulin optimisation, diet counselling, and complication screening built into every follow-up.' },
-    { num: '03', title: 'Hypertension Care', desc: 'BP control is the start, not the finish. We assess your full cardiovascular risk — heart, kidneys, vessels — and treat the person, not just the number.' },
-    { num: '04', title: 'IV Treatment & Day Care', desc: 'IV fluids, medications, and day procedures — managed safely at the clinic. Avoid unnecessary hospitalisation without compromising on care.' },
-    { num: '05', title: 'Preventive Health Check-ups', desc: 'Catch problems before they become crises. Sugar, BP, kidneys, thyroid, lipids — a full metabolic screen with a physician review, not just a lab report handed to you.' },
-    { num: '06', title: 'Adult Vaccination', desc: 'If you have diabetes or high BP, a simple infection can spiral fast. One visit at Vedic Health Clinic — we assess your vaccination gaps and cover you for hepatitis, pneumonia, flu, typhoid, and more. No referrals, no running around. Done here, same day.' },
+const services = [
+    { num: '01', title: 'OPD Consultation', desc: 'Thorough evaluation, diagnosis, and treatment planning for acute and chronic medical conditions.', bg: 'bg-[#e6f4f4]' },
+    { num: '02', title: 'Diabetes Management Program', desc: 'Individualised diabetes care including medication, insulin therapy, diet guidance, and regular HbA1c monitoring.', bg: 'bg-[#fef3e2]' },
+    { num: '03', title: 'Hypertension Care', desc: 'Blood pressure control with targeted treatment, cardiovascular risk reduction, and lifestyle counselling.', bg: 'bg-[#e8f4e8]' },
+    { num: '04', title: 'IV Treatment & Day Care', desc: 'Intravenous medications, fluid management, and day care procedures without the need for hospital admission.', bg: 'bg-[#f0e8f0]' },
+    { num: '05', title: 'Preventive Health Check-ups', desc: 'Comprehensive health screening to detect conditions early — including sugar, blood pressure, kidney, thyroid, and lipid tests.', bg: 'bg-[#f5e6e8]' },
+    { num: '06', title: 'Adult Vaccination', desc: 'Recommended adult vaccines including hepatitis, influenza, pneumococcal, typhoid, and others as clinically indicated.', bg: 'bg-[#e6e8f4]' },
   ]
 
   const conditions = [
-    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-11 h-11 object-contain" /> },
-    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-11 h-11 object-contain" /> },
-    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <img src="/assets/ThyroidDisorders.png" alt="Thyroid" className="w-11 h-11 object-contain" /> },
-    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-11 h-11 object-contain" /> },
-    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-11 h-11 object-contain" /> },
-    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-11 h-11 object-contain" /> },
+    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e6f4f4]' },
+    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0f7f7]' },
+    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <img src="/assets/ThyroidDisorders.png" alt="Thyroid" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f5f0e6]' },
+    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#fef3e2]' },
+    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e8f4e8]' },
+    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0e8f0]' },
   ]
 
   return (
@@ -392,7 +392,7 @@ function MainApp() {
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive care for chronic and acute medical conditions.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {conditions.map((item, i) => (
-              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-[#e6f4f4] rounded-lg p-6 md:p-8 hover:bg-[#d4eaea] hover:shadow-lg hover:-translate-y-1">
+              <div key={i} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 ${item.bg} rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1`}>
                 <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-5">{item.icon}</div>
                 <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
@@ -453,8 +453,8 @@ function MainApp() {
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {services.map((item, i) => (
-              <div key={i} className="fade-up opacity-0 translate-y-7 transition-all duration-700 bg-[#f0f7f7] rounded-lg p-6 md:p-8 hover:bg-[#e6f4f4] hover:shadow-lg hover:-translate-y-1">
-                <div className="text-[38px] md:text-[48px] font-semibold text-[#c2e0e0] leading-none mb-4">{item.num}</div>
+              <div key={i} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 ${item.bg} rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1`}>
+                <div className="text-[38px] md:text-[48px] font-semibold text-[#094f4f] leading-none mb-4">{item.num}</div>
                 <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
               </div>
