@@ -2,126 +2,10 @@ import { useEffect, useState } from 'react'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { saveToSheet } from './services/sheetService'
 import { FiMapPin, FiPhone, FiClock, FiCheck, FiX } from 'react-icons/fi'
-
-const DiabetesPage = () => (
-  <div className="min-h-screen bg-[#fafaf8] pt-[68px]">
-    <div className="container py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 max-w-[1120px] mx-auto">
-      <a href="#education-tiles" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70">
-        <span>←</span> Back to Education
-      </a>
-      <div className="section-label">Patient Education</div>
-      <h1 className="section-title">Diabetes: Understanding<br/>Your Condition</h1>
-      <p className="section-sub">Know the facts. Control your sugar. Prevent complications.</p>
-      
-      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 md:gap-16 lg:gap-20 mt-10 md:mt-13">
-        <div className="space-y-6">
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">What is Diabetes?</h3><p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-[1.8] mt-2">Diabetes is a chronic condition in which the blood sugar (glucose) level remains persistently high. This happens either because the pancreas does not produce enough insulin, or because the body's cells do not respond to insulin effectively. Left unmanaged, high blood sugar causes damage to blood vessels and nerves throughout the body — affecting the kidneys, eyes, heart, and feet.</p></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Common Symptoms</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Frequent urination, especially at night</li><li>Excessive thirst and dry mouth</li><li>Unexplained fatigue or weakness</li><li>Blurred vision</li><li>Slow-healing wounds or cuts</li><li>Unexplained weight loss (Type 1)</li><li>Tingling or numbness in hands and feet</li></ul></div>
-          <div className="bg-[#fff8f0] border border-[#f0d5b0] border-l-4 border-l-[#b5893a] rounded-r p-3 md:p-4 text-[12px] md:text-[14px] text-[#7a5020] leading-[1.65]">⚠ Important: Many patients with Type 2 diabetes have no symptoms in the early stages. Regular screening is the only way to detect it early.</div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Why Controlling Diabetes Matters</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Kidney damage — can lead to dialysis</li><li>Eye damage — can cause blindness</li><li>Nerve damage — numbness, pain, weakness</li><li>Heart disease and stroke</li><li>Foot ulcers and amputations</li></ul></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">How We Treat Diabetes</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Accurate diagnosis and classification</li><li>Individualised medication plan</li><li>Dietary guidance tailored to your lifestyle</li><li>HbA1c and regular blood sugar monitoring</li><li>Screening and prevention of complications</li><li>Long-term follow-up with treatment adjustments</li></ul></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Treatment Approach</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Lifestyle modifications</li><li>Oral anti-diabetic medications</li><li>Insulin therapy</li><li>Regular self-monitoring of blood glucose</li></ul></div>
-        </div>
-        <div>
-          <div className="bg-[#094f4f] rounded-lg p-6 md:p-8 mb-4 md:mb-5 text-white">
-            <h3 className="text-[18px] md:text-[22px] font-semibold text-white mb-2 md:mb-3">Get Your Diabetes Evaluated</h3>
-            <p className="text-[12px] md:text-[14px] text-white/65 leading-[1.7] mb-4 md:mb-6">Early detection and proper management can prevent all major complications. Book a consultation today.</p>
-            <a href="#contact" className="block w-full bg-[#b5893a] text-white text-center px-5 md:px-7 py-3 md:py-3.5 rounded text-sm font-semibold tracking-wide hover:bg-[#a07530] transition-all mb-2">Book Appointment</a>
-            <a href="tel:+919948494455" className="block w-full border border-white/30 text-white text-center px-5 md:px-7 py-3 md:py-3.5 rounded text-sm font-medium tracking-wide">Call Clinic</a>
-          </div>
-          <div className="bg-white border border-[#e0e8e8] rounded-lg p-5 md:p-6">
-            <h4 className="text-[12px] md:text-[14px] font-semibold uppercase tracking-widest text-[#094f4f] mb-3 md:mb-4">Who Should Get Tested?</h4>
-            <ul className="space-y-2 text-[12px] md:text-[14px] text-[#5a5a5a]">{['Age above 35 years', 'Family history of diabetes', 'Overweight or obese', 'High blood pressure', 'Known prediabetes', 'Symptoms of high blood sugar', 'Gestational diabetes in pregnancy'].map((i, idx) => <li key={idx} className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-[#0d6e6e] rounded-full"></span>{i}</li>)}</ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-
-const HypertensionPage = () => (
-  <div className="min-h-screen bg-[#fafaf8] pt-[68px]">
-    <div className="container py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 max-w-[1120px] mx-auto">
-      <a href="#education-tiles" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70"><span>←</span> Back to Education</a>
-      <div className="section-label">Patient Education</div>
-      <h1 className="section-title">Hypertension: Understanding<br/>High Blood Pressure</h1>
-      <p className="section-sub">The silent disease that affects your heart, kidneys, and more.</p>
-      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 md:gap-16 lg:gap-20 mt-10 md:mt-13">
-        <div className="space-y-6">
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">What is Hypertension?</h3><p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-[1.8] mt-2">Hypertension, commonly known as high blood pressure, is a condition in which the force of blood against the walls of your arteries is consistently too high. Over time, this increased pressure damages the arterial walls and forces the heart to work harder.</p></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Understanding the Readings</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] mt-2 space-y-1"><li><span className="text-[#0d6e6e] font-bold">120/80</span> - Normal</li><li><span className="text-[#b5893a] font-bold">120-129/ below 80</span> - Elevated</li><li><span className="text-orange-600 font-bold">130-139/ 80-89</span> - Stage 1 High</li><li><span className="text-red-700 font-bold">140+/ 90+</span> - Stage 2 High</li></ul></div>
-          <div className="bg-[#fff8f0] border border-[#f0d5b0] border-l-4 border-l-[#b5893a] rounded-r p-3 md:p-4 text-[12px] md:text-[14px] text-[#7a5020]">⚠ Important: Hypertension is often called the "silent killer" because it typically has no symptoms until serious damage has already occurred.</div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Risks of Uncontrolled Hypertension</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Heart disease and heart attack</li><li>Stroke</li><li>Kidney damage</li><li>Vision loss</li><li>Heart failure</li></ul></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Treatment Approach</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Low-sodium diet</li><li>Regular physical activity</li><li>Weight management</li><li>Antihypertensive medications</li><li>Regular monitoring</li></ul></div>
-        </div>
-        <div>
-          <div className="bg-[#094f4f] rounded-lg p-6 md:p-8 mb-4 md:mb-5 text-white">
-            <h3 className="text-[18px] md:text-[22px] font-semibold text-white mb-2 md:mb-3">Get Your Blood Pressure Checked</h3>
-            <p className="text-[12px] md:text-[14px] text-white/65 mb-4 md:mb-6">Regular check-ups can prevent serious complications.</p>
-            <a href="#contact" className="block w-full bg-[#b5893a] text-white text-center px-5 py-3 rounded text-sm font-semibold tracking-wide hover:bg-[#a07530] mb-2">Book Appointment</a>
-            <a href="tel:+919948494455" className="block w-full border border-white/30 text-white text-center px-5 py-3 rounded text-sm font-medium">Call Clinic</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-
-const FeverPage = () => (
-  <div className="min-h-screen bg-[#fafaf8] pt-[68px]">
-    <div className="container py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 max-w-[1120px] mx-auto">
-      <a href="#education-tiles" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70"><span>←</span> Back to Education</a>
-      <div className="section-label">Patient Education</div>
-      <h1 className="section-title">Fever: Understanding<br/>Your Symptoms</h1>
-      <p className="section-sub">When your body fights infection, knowing what to do matters.</p>
-      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 md:gap-16 lg:gap-20 mt-10 md:mt-13">
-        <div className="space-y-6">
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">What is Fever?</h3><p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-[1.8] mt-2">Fever is not an illness but a symptom — your body's natural response to infection. When harmful bacteria or viruses enter your system, the hypothalamus raises your body temperature to create an unfavorable environment for pathogens.</p></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Common Causes</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Viral infections (cold, flu, COVID-19)</li><li>Bacterial infections</li><li>Heat exhaustion</li><li>Inflammatory conditions</li></ul></div>
-          <div className="bg-[#fff8f0] border border-[#f0d5b0] border-l-4 border-l-[#b5893a] rounded-r p-3 md:p-4 text-[12px] md:text-[14px] text-[#7a5020]">⚠ Seek immediate medical attention if fever is accompanied by severe symptoms.</div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">When to Seek Medical Help</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Temperature above 103°F (39.4°C)</li><li>Severe headache or stiff neck</li><li>Difficulty breathing</li><li>Persistent vomiting</li><li>Confusion</li></ul></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Home Care</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Rest and stay hydrated</li><li>Take fever-reducing medications (paracetamol)</li><li>Use cool compresses</li><li>Wear lightweight clothing</li></ul></div>
-        </div>
-        <div>
-          <div className="bg-[#094f4f] rounded-lg p-6 md:p-8 mb-4 md:mb-5 text-white">
-            <h3 className="text-[18px] md:text-[22px] font-semibold text-white mb-2 md:mb-3">Get Evaluated for Persistent Fever</h3>
-            <p className="text-[12px] md:text-[14px] text-white/65 mb-4 md:mb-6">If fever persists for more than 3 days, get evaluated.</p>
-            <a href="#contact" className="block w-full bg-[#b5893a] text-white text-center px-5 py-3 rounded text-sm font-semibold tracking-wide hover:bg-[#a07530] mb-2">Book Appointment</a>
-            <a href="tel:+919948494455" className="block w-full border border-white/30 text-white text-center px-5 py-3 rounded text-sm font-medium">Call Clinic</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-
-const GastroenterologyPage = () => (
-  <div className="min-h-screen bg-[#fafaf8] pt-[68px]">
-    <div className="container py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 max-w-[1120px] mx-auto">
-      <a href="#education-tiles" className="inline-flex items-center gap-2 text-[#0d6e6e] text-sm font-medium uppercase tracking-widest mb-4 hover:opacity-70"><span>←</span> Back to Education</a>
-      <div className="section-label">Patient Education</div>
-      <h1 className="section-title">Gastroenterology:<br/>Digestive Health Guide</h1>
-      <p className="section-sub">Understanding common digestive issues and their management.</p>
-      <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 md:gap-16 lg:gap-20 mt-10 md:mt-13">
-        <div className="space-y-6">
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">What is Gastroenterology?</h3><p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-[1.8] mt-2">Gastroenterology focuses on the digestive system (GI tract) including esophagus, stomach, intestines, liver, gallbladder, and pancreas.</p></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Common Conditions</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Acid reflux (GERD)</li><li>Peptic ulcers</li><li>Irritable Bowel Syndrome (IBS)</li><li>Constipation / Diarrhea</li><li>Gallstones</li></ul></div>
-          <div className="bg-[#fff8f0] border border-[#f0d5b0] border-l-4 border-l-[#b5893a] rounded-r p-3 md:p-4 text-[12px] md:text-[14px] text-[#7a5020]">⚠ Persistent digestive symptoms should not be ignored. Early evaluation can prevent complications.</div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Warning Signs</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Blood in stool</li><li>Persistent abdominal pain</li><li>Unexplained weight loss</li><li>Chronic heartburn</li></ul></div>
-          <div><h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a]">Prevention Tips</h3><ul className="text-[13px] md:text-[15px] text-[#5a5a5a] list-disc list-inside mt-2 space-y-1"><li>Eat balanced meals</li><li>Stay hydrated</li><li>Fiber-rich diet</li><li>Regular exercise</li></ul></div>
-        </div>
-        <div>
-          <div className="bg-[#094f4f] rounded-lg p-6 md:p-8 mb-4 md:mb-5 text-white">
-            <h3 className="text-[18px] md:text-[22px] font-semibold text-white mb-2 md:mb-3">Get Your Digestive Health Evaluated</h3>
-            <p className="text-[12px] md:text-[14px] text-white/65 mb-4 md:mb-6">Don't ignore digestive symptoms.</p>
-            <a href="#contact" className="block w-full bg-[#b5893a] text-white text-center px-5 py-3 rounded text-sm font-semibold tracking-wide hover:bg-[#a07530] mb-2">Book Appointment</a>
-            <a href="tel:+919948494455" className="block w-full border border-white/30 text-white text-center px-5 py-3 rounded text-sm font-medium">Call Clinic</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+import DiabetesPage from './pages/DiabetesPage'
+import HypertensionPage from './pages/HypertensionPage'
+import FeverPage from './pages/FeverPage'
+import GastroenterologyPage from './pages/GastroenterologyPage'
 
 function MainApp() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -393,7 +277,7 @@ const services = [
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {conditions.map((item, i) => (
               <div key={i} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 ${item.bg} rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1`}>
-                <div className="w-12 md:w-14 h-12 md:h-14 mb-4 md:mb-5">{item.icon}</div>
+                <div className="w-12 md:w-[48px] h-12 md:h-[48px] mb-4 md:mb-3">{item.icon}</div>
                 <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
               </div>
@@ -564,16 +448,18 @@ const services = [
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             {[
-              { title: 'Diabetes', desc: 'Understanding blood sugar, symptoms, and management.', page: '#/diabetes', icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg> },
-              { title: 'Hypertension', desc: 'High blood pressure - the silent killer.', page: '#/hypertension', icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg> },
-              { title: 'Fever', desc: 'Understanding fever and when to seek care.', page: '#/fever', icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg> },
-              { title: 'Gastroenterology', desc: 'Digestive health and common GI issues.', page: '#/gastroenterology', icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1M12 12v5m0 5v1m-3-5h.01M4 12H3m1 0V7m0 5v.01M7 7v.01" /></svg> },
+              { title: 'Diabetes', desc: 'Understanding blood sugar, symptoms, and management.', page: '#/diabetes', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-9 h-9 object-contain" />, bg: 'bg-[#e6f4f4]' },
+              { title: 'Hypertension', desc: 'High blood pressure - the silent killer.', page: '#/hypertension', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-9 h-9 object-contain" />, bg: 'bg-[#fef3e2]' },
+              { title: 'Fever', desc: 'Understanding fever and when to seek care.', page: '#/fever', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-9 h-9 object-contain" />, bg: 'bg-[#e8f4e8]' },
+              { title: 'Gastroenterology', desc: 'Digestive health and common GI issues.', page: '#/gastroenterology', icon: <img src="/assets/LifeStyle.png" alt="Gastro" className="w-9 h-9 object-contain" />, bg: 'bg-[#f0e8f0]' },
             ].map((item, i) => (
-              <a key={i} href={item.page} className="fade-up opacity-0 translate-y-7 transition-all duration-700 block bg-[#fafaf8] border border-[#e0e8e8] rounded-lg p-5 md:p-6 hover:border-[#0d6e6e] hover:shadow-lg hover:-translate-y-0.5">
-                <div className="w-10 h-10 bg-[#e6f4f4] rounded-full flex items-center justify-center mb-3 md:mb-4 text-[#0d6e6e]">{item.icon}</div>
-                <h3 className="text-[14px] md:text-[16px] font-semibold text-[#1a1a1a] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[14px] text-[#8a8a8a] leading-relaxed">{item.desc}</p>
-                <span className="text-[11px] text-[#0d6e6e] font-medium mt-3 block">Learn more</span>
+              <a key={i} href={item.page} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 block ${item.bg} rounded-xl p-5 md:p-6 hover:shadow-lg hover:-translate-y-1`}>
+                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4 p-1.5">
+                  {item.icon}
+                </div>
+                <h3 className="text-[14px] md:text-[16px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
+                <p className="text-[12px] md:text-[14px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
+                <span className="text-[11px] text-[#0d6e6e] font-medium mt-3 block">Learn more →</span>
               </a>
             ))}
           </div>
