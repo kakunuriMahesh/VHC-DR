@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Fragment } from 'react'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { saveToSheet } from './services/sheetService'
 import { FiMapPin, FiPhone, FiClock, FiCheck, FiX } from 'react-icons/fi'
@@ -69,21 +69,21 @@ function MainApp() {
   }
 
 const services = [
-    { num: '01', title: 'OPD Consultation', desc: 'Thorough evaluation, diagnosis, and treatment planning for acute and chronic medical conditions.', bg: 'bg-[#e6f4f4]' },
-    { num: '02', title: 'Diabetes Management Program', desc: 'Individualised diabetes care including medication, insulin therapy, diet guidance, and regular HbA1c monitoring.', bg: 'bg-[#fef3e2]' },
-    { num: '03', title: 'Hypertension Care', desc: 'Blood pressure control with targeted treatment, cardiovascular risk reduction, and lifestyle counselling.', bg: 'bg-[#e8f4e8]' },
-    { num: '04', title: 'IV Treatment & Day Care', desc: 'Intravenous medications, fluid management, and day care procedures without the need for hospital admission.', bg: 'bg-[#f0e8f0]' },
-    { num: '05', title: 'Preventive Health Check-ups', desc: 'Comprehensive health screening to detect conditions early — including sugar, blood pressure, kidney, thyroid, and lipid tests.', bg: 'bg-[#f5e6e8]' },
-    { num: '06', title: 'Adult Vaccination', desc: 'Recommended adult vaccines including hepatitis, influenza, pneumococcal, typhoid, and others as clinically indicated.', bg: 'bg-[#e6e8f4]' },
+    { num: '01', title: 'OPD Consultation', desc: 'Every visit ends with a clear diagnosis, a written plan, and a doctor who actually explains what\'s happening — not just a prescription and a goodbye.', bg: 'bg-[#e6f4f4]' },
+    { num: '02', title: 'Diabetes Management Program', desc: 'A structured, protocol-driven program — not just monthly prescriptions. HbA1c tracking, insulin optimisation, diet counselling, and complication screening built into every follow-up.', bg: 'bg-[#fef3e2]' },
+    { num: '03', title: 'Hypertension Care', desc: 'BP control is the start, not the finish. We assess your full cardiovascular risk — heart, kidneys, vessels — and treat the person, not just the number.', bg: 'bg-[#e8f4e8]' },
+    { num: '04', title: 'IV Treatment & Day Care', desc: 'IV fluids, medications, and day procedures — managed safely at the clinic. Avoid unnecessary hospitalisation without compromising on care.', bg: 'bg-[#f0e8f0]' },
+    { num: '05', title: 'Preventive Health Check-ups', desc: 'Catch problems before they become crises. Sugar, BP, kidneys, thyroid, lipids — a full metabolic screen with a physician review, not just a lab report handed to you.', bg: 'bg-[#f5e6e8]' },
+    { num: '06', title: 'Adult Vaccination', desc: 'If you have diabetes or high BP, a simple infection can spiral fast. One visit at Vedic Health Clinic — we assess your vaccination gaps and cover you for hepatitis, pneumonia, flu, typhoid, and more. No referrals, no running around. Done here, same day.', bg: 'bg-[#e6e8f4]' },
   ]
 
   const conditions = [
-    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e6f4f4]' },
-    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0f7f7]' },
-    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <img src="/assets/ThyroidDisorders.png" alt="Thyroid" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f5f0e6]' },
-    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#fef3e2]' },
-    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e8f4e8]' },
-    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-11 h-11 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0e8f0]' },
+    { title: 'Diabetes Mellitus', desc: 'Type 1 & Type 2 diabetes, insulin therapy initiation, long-term sugar control, complication prevention.', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e6f4f4]' },
+    { title: 'Hypertension', desc: 'Blood pressure management, cardiovascular risk assessment, lifestyle modification and medication planning.', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0f7f7]' },
+    { title: 'Thyroid Disorders', desc: 'Hypothyroidism, hyperthyroidism, thyroid nodules, and hormonal imbalances with accurate monitoring.', icon: <img src="/assets/ThyroidDisorders.png" alt="Thyroid" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f5f0e6]' },
+    { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#fef3e2]' },
+    { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e8f4e8]' },
+    { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0e8f0]' },
   ]
 
   return (
@@ -225,11 +225,11 @@ const services = [
     <img
       src="/assets/HeroImg.jpeg"
       alt="Vedic Health Clinic"
-      className="w-full h-full object-cover object-bottom"
+      className="w-[350px] absolute top-[150px] left-1/2 transform -translate-x-1/2 object-cover object-bottom rounded-lg shadow-lg"
     />
 
     {/* Cards */}
-    <div className="absolute bottom-[200px] right-4 flex gap-3">
+    <div className="absolute bottom-[100px] right-4 flex gap-3">
       <div className="bg-white rounded-lg px-4 py-2 shadow-lg">
         <div className="font-[Cormorant_Garamond] font-bold text-xl text-[#094f4f] leading-none">
           5+
@@ -264,7 +264,7 @@ const services = [
           </div>
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/5Years.png" alt="Experience" className="w-8 h-8 object-contain" />
-            <span>10+ Years Clinical Experience</span>
+            <span>5+ Years Clinical Experience</span>
           </div>
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/Academic.png" alt="Academic" className="w-8 h-8 object-contain" />
@@ -286,7 +286,7 @@ const services = [
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {conditions.map((item, i) => (
               <div key={i} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 ${item.bg} rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1`}>
-                <div className="w-12 md:w-[48px] h-12 md:h-[48px] mb-4 md:mb-3">{item.icon}</div>
+                <div className="w-12 md:w-[68px] h-12 md:h-[68px] mb-4 md:mb-3">{item.icon}</div>
                 <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
                 <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
               </div>
@@ -398,14 +398,14 @@ const services = [
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MD – General Medicine <span className="text-[#b5893a] font-semibold ml-1">2021</span></div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MD – General Medicine <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2021</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pune</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MBBS <span className="text-[#b5893a] font-semibold ml-1">2013</span></div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MBBS <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2013</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Guntur Medical College & Government General Hospital (GGH), Guntur</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
               </div>
@@ -416,14 +416,14 @@ const services = [
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCCKD <span className="text-[#b5893a] font-semibold ml-1">2025</span></div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCCKD <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2025</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Chronic Kidney Disease Management</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCEBDM <span className="text-[#b5893a] font-semibold ml-1">2023</span></div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCEBDM <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2023</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Evidence-Based Diabetes Management</div>
                 <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
               </div>
@@ -481,23 +481,190 @@ const services = [
           <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">Learn About Your Health</h2>
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Click on a topic to learn more about your condition and treatment options.</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-            {[
-              { title: 'Diabetes', desc: 'Understanding blood sugar, symptoms, and management.', page: '#/diabetes', icon: <img src="/assets/DiabetesMellitus.png" alt="Diabetes" className="w-9 h-9 object-contain" />, bg: 'bg-[#e6f4f4]' },
-              { title: 'Hypertension', desc: 'High blood pressure - the silent killer.', page: '#/hypertension', icon: <img src="/assets/Hypertension.png" alt="Hypertension" className="w-9 h-9 object-contain" />, bg: 'bg-[#fef3e2]' },
-              { title: 'Fever', desc: 'Understanding fever and when to seek care.', page: '#/fever', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-9 h-9 object-contain" />, bg: 'bg-[#e8f4e8]' },
-              { title: 'Gastroenterology', desc: 'Digestive health and common GI issues.', page: '#/gastroenterology', icon: <img src="/assets/LifeStyle.png" alt="Gastro" className="w-9 h-9 object-contain" />, bg: 'bg-[#f0e8f0]' },
-            ].map((item, i) => (
-              <a key={i} href={item.page} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 block ${item.bg} rounded-xl p-5 md:p-6 hover:shadow-lg hover:-translate-y-1`}>
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-3 md:mb-4 p-1.5">
-                  {item.icon}
-                </div>
-                <h3 className="text-[14px] md:text-[16px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
-                <p className="text-[12px] md:text-[14px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
-                <span className="text-[11px] text-[#0d6e6e] font-medium mt-3 block">Learn more →</span>
-              </a>
-            ))}
+{/* v1 */}
+
+{/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  {[
+    {
+      title: 'Diabetes',
+      desc: 'Understanding blood sugar, symptoms, and management.',
+      page: '#/diabetes',
+      icon: '/assets/lineDiabetes.png',
+      bg: 'bg-[#8ED8C3]',
+    },
+    {
+      title: 'Hypertension',
+      desc: 'High blood pressure - the silent killer.',
+      page: '#/hypertension',
+      icon: '/assets/HypertensionART.png',
+      bg: 'bg-[#B1A6F2]',
+    },
+    {
+      title: 'Fever',
+      desc: 'Understanding fever and when to seek care.',
+      page: '#/fever',
+      icon: '/assets/feverART.png',
+      bg: 'bg-[#FFAA8F]',
+    },
+    {
+      title: 'Gastroenterology',
+      desc: 'Digestive health and common GI issues.',
+      page: '#/gastroenterology',
+      icon: '/assets/GastroART.png',
+      bg: 'bg-[#8FB5F5]',
+    },
+  ].map((item, i) => (
+    <a
+      key={i}
+      href={item.page}
+      className={`fade-up opacity-0 translate-y-7 transition-all duration-500 ${item.bg} rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 flex justify-between  min-h-[260px] overflow-hidden`}
+    >
+      <div className="flex flex-col justify-between">
+        <div>
+          <h3 className="text-[16px] font-semibold text-[#0b3c3c] mb-2">
+            {item.title}
+          </h3>
+
+          <p className="text-[13px] text-[#3f3f3f] leading-relaxed mb-4">
+            {item.desc}
+          </p>
+        </div>
+
+        <span className="text-[14px] text-[#000] font-medium font-bold">
+          Learn more →
+        </span>
+      </div>
+      <div className="w-[240px] h-[240px] ">
+        <img
+          src={item.icon}
+          alt={item.title}
+          className=" bottom-[-10px] right-[-10px] w-[260px] h-[260px] object-contain"
+        />
+      </div>
+    </a>
+  ))}
+</div> */}
+
+{/* new version */}
+
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  {[
+    {
+      title: 'Diabetes',
+      desc: 'Understanding blood sugar, symptoms, and management.',
+      page: '#/diabetes',
+      img: '/assets/lineDiabetes.png',
+      docImg: '/assets/DiaDr.png',
+      bg: 'bg-[#8ED8C3]',
+    },
+    {
+      title: 'Hypertension',
+      desc: 'High blood pressure - the silent killer.',
+      page: '#/hypertension',
+      img: '/assets/HypertensionART.png',
+      docImg: '/assets/HypDr.png',
+      bg: 'bg-[#B1A6F2]',
+    },
+    {
+      title: 'Fever',
+      desc: 'Understanding fever and when to seek care.',
+      page: '#/fever',
+      img: '/assets/feverART.png',
+      docImg: '/assets/FevDr.png',
+      bg: 'bg-[#FFAA8F]',
+    },
+    {
+      title: 'Gastroenterology',
+      desc: 'Digestive health and common GI issues.',
+      page: '#/gastroenterology',
+      img: '/assets/GastroART.png',
+      docImg: '/assets/GasDr.png',
+      bg: 'bg-[#8FB5F5]',
+    },
+  ].map((item, i) => {
+    const isEvenRow = Math.floor(i / 2) % 2 === 0;
+    const isFirstInPair = i % 2 === 0;
+
+    const showContentFirst = isEvenRow ? isFirstInPair : !isFirstInPair;
+
+    return (
+      <Fragment key={i}>
+        {showContentFirst && (
+          <a
+            href={item.page}
+            className={`rounded-3xl p-6 md:p-8 flex flex-col justify-between h-[260px] ${item.bg} hover:shadow-xl transition`}
+          >
+            <div>
+              <div className="mb-4">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-[50px] h-[50px] object-contain"
+                />
+              </div>
+
+              <h3 className="text-[18px] font-semibold text-[#0b3c3c] mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-[14px] text-[#2f2f2f] leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+
+            <span className="text-[14px] text-black font-medium">
+              Learn more →
+            </span>
+          </a>
+        )}
+
+        <a
+          href={item.page}
+          className="hidden lg:block rounded-3xl overflow-hidden h-[260px] relative group"
+        >
+          <img
+            src={item.docImg}
+            alt="doctor"
+            className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+          />
+
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 w-[42px] h-[42px] bg-white rounded-full flex items-center justify-center shadow-md">
+            →
           </div>
+        </a>
+
+        {!showContentFirst && (
+          <a
+            href={item.page}
+            className={`rounded-3xl p-6 md:p-8 flex flex-col justify-between h-[260px] ${item.bg} hover:shadow-xl transition`}
+          >
+            <div>
+              <div className="mb-4">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-[50px] h-[50px] object-contain"
+                />
+              </div>
+
+              <h3 className="text-[18px] font-semibold text-[#0b3c3c] mb-3">
+                {item.title}
+              </h3>
+
+              <p className="text-[14px] text-[#2f2f2f] leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+
+            <span className="text-[14px] text-black font-medium">
+              Learn more →
+            </span>
+          </a>
+        )}
+      </Fragment>
+    );
+  })}
+</div>
         </div>
       </section>
 

@@ -26,13 +26,18 @@
     @apply font-body bg-bg text-text text-base leading-relaxed;
   }
   
-  h1, h2, h3, h4 {
+  h1, h2 {
     @apply font-heading;
     line-height: 1.2;
     /* font-family:'DM Sans', sans-serif; */
     font-family:'Cormorant Garamond', serif;
   }
 }
+ h3, h4{
+    @apply font-heading;
+    /* line-height: 1.2; */
+    font-family:'DM Sans', sans-serif;
+ }
 
 @keyframes scroll {
   0% {
