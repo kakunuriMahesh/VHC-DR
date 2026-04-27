@@ -69,12 +69,12 @@ function MainApp() {
   }
 
 const services = [
-    { num: '01', title: 'OPD Consultation', desc: 'Every visit ends with a clear diagnosis, a written plan, and a doctor who actually explains what\'s happening — not just a prescription and a goodbye.', bg: 'bg-[#e6f4f4]' },
-    { num: '02', title: 'Diabetes Management Program', desc: 'A structured, protocol-driven program — not just monthly prescriptions. HbA1c tracking, insulin optimisation, diet counselling, and complication screening built into every follow-up.', bg: 'bg-[#fef3e2]' },
-    { num: '03', title: 'Hypertension Care', desc: 'BP control is the start, not the finish. We assess your full cardiovascular risk — heart, kidneys, vessels — and treat the person, not just the number.', bg: 'bg-[#e8f4e8]' },
-    { num: '04', title: 'IV Treatment & Day Care', desc: 'IV fluids, medications, and day procedures — managed safely at the clinic. Avoid unnecessary hospitalisation without compromising on care.', bg: 'bg-[#f0e8f0]' },
-    { num: '05', title: 'Preventive Health Check-ups', desc: 'Catch problems before they become crises. Sugar, BP, kidneys, thyroid, lipids — a full metabolic screen with a physician review, not just a lab report handed to you.', bg: 'bg-[#f5e6e8]' },
-    { num: '06', title: 'Adult Vaccination', desc: 'If you have diabetes or high BP, a simple infection can spiral fast. One visit at Vedic Health Clinic — we assess your vaccination gaps and cover you for hepatitis, pneumonia, flu, typhoid, and more. No referrals, no running around. Done here, same day.', bg: 'bg-[#e6e8f4]' },
+    { num: '01', title: 'OPD Consultation', Img:<img src='/assets/OPDConsultation.png' alt='OPDConsultation' className="w-full h-full object-contain" />, desc: 'Every visit ends with a clear diagnosis, a written plan, and a doctor who actually explains what\'s happening — not just a prescription and a goodbye.', bg: 'bg-[#9FE1C7]' },
+    { num: '02', title: 'Diabetes Management Program',Img:<img src='/assets/DiabetesManagement.png' alt='DiabetesManagement' className="w-full h-full object-contain" />,  desc: 'A structured, protocol-driven program — not just monthly prescriptions. HbA1c tracking, insulin optimisation, diet counselling, and complication screening built into every follow-up.', bg: 'bg-[#C7BEF8]' },
+    { num: '03', title: 'Hypertension Care',Img:<img src='/assets/HypertensionCare.png' alt='HypertensionCare' className="w-full h-full object-contain" />, desc: 'BP control is the start, not the finish. We assess your full cardiovascular risk — heart, kidneys, vessels — and treat the person, not just the number.', bg: 'bg-[#FAAA96]' },
+    { num: '04', title: 'IV Treatment & Day Care',Img:<img src='/assets/IVTreatment.png' alt='IVTreatment' className="w-full h-full object-contain" />, desc: 'IV fluids, medications, and day procedures — managed safely at the clinic. Avoid unnecessary hospitalisation without compromising on care.', bg: 'bg-[#98C4F7]' },
+    { num: '05', title: 'Preventive Health Check-ups',Img:<img src='/assets/PreventiveCheck-up.png' alt='PreventiveCheck-up' className="w-full h-full object-contain" />, desc: 'Catch problems before they become crises. Sugar, BP, kidneys, thyroid, lipids — a full metabolic screen with a physician review, not just a lab report handed to you.', bg: 'bg-[#F7B3CC]' },
+    { num: '06', title: 'Adult Vaccination',Img:<img src='/assets/AdultVaccination.png' alt='AdultVaccination' className="w-full h-full object-contain" />, desc: 'If you have diabetes or high BP, a simple infection can spiral fast. One visit at Vedic Health Clinic — we assess your vaccination gaps and cover you for hepatitis, pneumonia, flu, typhoid, and more. No referrals, no running around. Done here, same day.', bg: 'bg-[#FDCD7E]' },
   ]
 
   const conditions = [
@@ -249,7 +249,7 @@ const services = [
       </div>
     </div>
   </div>
-</section>
+      </section>
 
       {/* TRUST BAR */}
       <div className="bg-white border-b border-[#e0e8e8] overflow-hidden">
@@ -339,22 +339,251 @@ const services = [
      
 
       {/* SERVICES */}
-      <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
+      {/* <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
         <div className="max-w-[1120px] mx-auto">
           <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Our Services</div>
           <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">What We Offer at Vedic<br/>Health Clinic</h2>
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
             {services.map((item, i) => (
-              <div key={i} className={`fade-up opacity-0 translate-y-7 transition-all duration-700 ${item.bg} rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1`}>
-                <div className="text-[38px] md:text-[48px] font-semibold text-[#094f4f] leading-none mb-4">{item.num}</div>
-                <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">{item.title}</h3>
-                <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">{item.desc}</p>
-              </div>
+               <div
+                  key={i}
+                  className={`fade-up opacity-0 translate-y-7 transition-all duration-500 ${item.bg} rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 flex justify-between  min-h-[260px] overflow-hidden`}
+                >
+                  <div className="flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-[16px] font-semibold text-[#0b3c3c] mb-2">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-[13px] text-[#3f3f3f] leading-relaxed mb-4">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="w-[240px] h-[240px] ">
+                    {item.Img}
+                  </div>
+               </div>
             ))}
           </div>
         </div>
+      </section> */}
+      <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
+        <div className="max-w-[1120px] mx-auto">
+          <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Our Services</div>
+          <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">What We Offer at Vedic<br/>Health Clinic</h2>
+          <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
+          <div className="mt-10 md:mt-13 space-y-6">
+
+  {/* ================= ROW 1 ================= */}
+  <div className="flex flex-col lg:flex-row gap-5 w-full">
+
+    {services.slice(0, 3).map((item, i) => (
+      <div
+        key={i}
+        className={`
+          group ${item.bg}
+          rounded-2xl p-6 shadow-sm hover:shadow-xl
+          overflow-hidden flex justify-between
+          transition-all duration-500 ease-in-out
+
+          /* 📱 Mobile + Tablet (NO ANIMATION) */
+          w-full h-[320px] md:h-[300px]
+
+          /* 🖥️ Desktop animation */
+          lg:h-[260px] lg:flex-1 lg:hover:flex-[2]
+
+          min-w-0
+        `}
+      >
+
+        {/* TEXT */}
+        <div className="flex flex-col justify-between w-[60%] min-w-0">
+
+          <div>
+            {/* TITLE */}
+            <h3
+              className="
+                font-semibold text-[#0b3c3c] mb-2
+                text-[24px] md:text-[26px]
+                lg:text-[14px]
+                lg:group-hover:text-[16px]
+                transition-all duration-300
+              "
+            >
+              {item.title}
+            </h3>
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+                text-[#3f3f3f] leading-relaxed
+                text-[14px] md:text-[18px]
+                lg:text-[12px]
+                lg:group-hover:text-[14px]
+                transition-all duration-300
+              "
+            >
+              {item.desc}
+            </p>
+          </div>
+
+        </div>
+
+        {/* IMAGE */}
+        <div className="flex items-center justify-end flex-shrink-0 h-full w-[40%]">
+          <div className="w-full h-full max-w-[240px]">
+            {item.Img}
+          </div>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+
+  {/* ================= ROW 2 ================= */}
+  <div className="flex flex-col lg:flex-row gap-5 w-full">
+
+    {services.slice(3).map((item, i) => (
+      <div
+        key={i}
+        className={`
+          group ${item.bg}
+          rounded-2xl p-6 shadow-sm hover:shadow-xl
+          overflow-hidden flex justify-between
+          transition-all duration-500 ease-in-out
+
+          /* 📱 Mobile + Tablet (NO ANIMATION) */
+          w-full h-[320px] md:h-[300px]
+
+          /* 🖥️ Desktop */
+          lg:h-[260px] lg:flex-1 lg:hover:flex-[2]
+
+          min-w-0
+        `}
+      >
+
+        {/* TEXT */}
+        <div className="flex flex-col justify-between w-[60%] min-w-0">
+
+          <div>
+            {/* TITLE */}
+            <h3
+              className="
+                font-semibold text-[#0b3c3c] mb-2
+                text-[24px] md:text-[26px]
+                lg:text-[14px]
+                lg:group-hover:text-[16px]
+                transition-all duration-300
+              "
+            >
+              {item.title}
+            </h3>
+
+            {/* DESCRIPTION */}
+            <p
+              className="
+                text-[#3f3f3f] leading-relaxed
+                text-[14px] md:text-[18px]
+                lg:text-[12px]
+                lg:group-hover:text-[14px]
+                transition-all duration-300
+              "
+            >
+              {item.desc}
+            </p>
+          </div>
+
+        </div>
+
+        {/* IMAGE */}
+        <div className="flex items-center justify-end flex-shrink-0 h-full w-[40%]">
+          <div className="w-full h-full max-w-[260px]">
+            {item.Img}
+          </div>
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+
+</div>
+        </div>
       </section>
+
+      {/* V2 */}
+      {/* <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
+
+  <div className="max-w-[1120px] mx-auto flex flex-col lg:flex-row gap-10">
+
+    <div className="lg:w-[40%] lg:sticky lg:top-24 h-fit">
+      
+      <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3">
+        <span className="w-6 h-[1px] bg-[#0d6e6e]"></span>
+        Our Services
+      </div>
+
+      <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">
+        What We Offer at Vedic<br/>Health Clinic
+      </h2>
+
+      <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed">
+        Comprehensive clinical services under one roof.
+      </p>
+
+    </div>
+
+
+    <div className="lg:w-[60%] flex flex-col gap-6">
+
+      {services.map((item, i) => (
+        <div
+          key={i}
+          className={`
+            group ${item.bg}
+            rounded-2xl p-6 shadow-sm hover:shadow-xl
+            flex justify-between
+            h-[280px] md:h-[260px]
+            overflow-hidden
+            transition-all duration-500
+            sticky top-24
+          `}
+          style={{
+            top: `${100 + i * 20}px` 
+          }}
+        >
+
+          <div className="flex flex-col justify-between min-w-0">
+            <div>
+              <h3 className="text-[16px] font-semibold text-[#0b3c3c] mb-2">
+                {item.title}
+              </h3>
+
+              <p className="text-[13px] text-[#3f3f3f] leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+
+          <div className="w-[220px] md:w-[240px] h-full flex-shrink-0 overflow-hidden">
+            <div className="w-full h-full">
+              {item.Img}
+            </div>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section> */}
+
 
       {/* WHY CHOOSE US */}
       <section className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10" style={{ background: '#094f4f' }}>
