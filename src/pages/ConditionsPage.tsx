@@ -38,6 +38,11 @@ const conditionsContent = (
         <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">Lifestyle Diseases</h3>
         <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">Obesity, metabolic syndrome, high cholesterol, fatty liver.</p>
       </div>
+      <div className="bg-[#e6f4f4] rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1 transition-all">
+        <img src="/assets/Osteoporosis.png" alt="Osteoporosis" className="w-11 h-11 object-contain rounded-full bg-white p-1 mb-4" />
+        <h3 className="text-[15px] md:text-[18px] font-semibold text-[#094f4f] mb-2">Osteoporosis & Bone Health</h3>
+        <p className="text-[13px] md:text-[15px] text-[#5a5a5a] leading-relaxed">Bone density assessment, fracture prevention, calcium and vitamin D management.</p>
+      </div>
     </div>
   </div>
 )

@@ -84,7 +84,8 @@ const services = [
     { title: 'Kidney Disease', desc: 'Chronic kidney disease management, monitoring of kidney function parameters, and slowing disease progression.', icon: <img src="/assets/KidneyDisease.png" alt="Kidney" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#fef3e2]' },
     { title: 'Fever & Infections', desc: 'Acute febrile illness, viral infections, respiratory tract infections, and tropical diseases like typhoid and dengue.', icon: <img src="/assets/FeverInfection.png" alt="Fever" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e8f4e8]' },
     { title: 'Lifestyle Diseases', desc: 'Obesity, metabolic syndrome, high cholesterol, fatty liver, and preventive health management.', icon: <img src="/assets/LifeStyle.png" alt="Lifestyle" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#f0e8f0]' },
-  ]
+    { title: 'Osteoporosis & Bone Health', desc: 'Bone density assessment, fracture prevention, calcium and vitamin D management, and treatment of osteoporosis.', icon: <img src="/assets/BoneHealthIcon.png" alt="Osteoporosis" className="w-15 h-15 object-contain rounded-full bg-white p-1" />, bg: 'bg-[#e6f4f4]' },
+   ]
 
   return (
     <div className="min-h-screen">
@@ -174,14 +175,14 @@ const services = [
       </section> */}
       <section
   id="home"
-  className="h-[calc(100vh)] overflow-hidden grid grid-cols-1 lg:grid-cols-2"
+  className="h-[calc(100vh)] overflow-hidden grid grid-cols-1 lg:grid-cols-2  bg-[#094f4f]"
 >
   {/* LEFT SIDE */}
   <div className="bg-[#094f4f] px-5 md:px-8 lg:px-10 xl:px-20 py-6 md:py-8 flex flex-col justify-center relative overflow-hidden">
     
     {/* Background circles */}
     <div className="hidden md:block absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full bg-white/[0.03] -top-[80px] -left-[80px]"></div>
-    <div className="hidden md:block absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] rounded-full bg-[#b5893a]/[0.08] bottom-[40px] -right-[60px]"></div>
+    <div className="hidden md:block z-50 absolute w-[200px] h-[200px] md:w-[250px] md:h-[250px] lg:w-[200px] lg:h-[200px] rounded-full bg-[#b5893a]/[0.08] bottom-[40px] -right-[30px] lg:right-[60px]"></div>
 
     {/* Content */}
     <div className="flex items-center gap-3 text-[#b5893a] text-xs font-medium uppercase tracking-widest mb-4">
@@ -221,11 +222,12 @@ const services = [
   </div>
 
   {/* RIGHT SIDE */}
-  <div className="hidden lg:flex bg-[#e6f4f4] items-stretch relative">
+  {/* <div className="hidden lg:flex bg-[#e6f4f4] items-stretch relative"> */}
+  <div className="hidden lg:flex items-stretch relative">
     <img
       src="/assets/HeroImg.jpeg"
       alt="Vedic Health Clinic"
-      className="w-[350px] absolute top-[150px] left-1/2 transform -translate-x-1/2 object-cover object-bottom rounded-lg shadow-lg"
+      className="w-[390px] absolute top-[130px] left-1/2 transform -translate-x-1/2 object-cover object-bottom rounded-lg shadow-lg"
     />
 
     {/* Cards */}
@@ -260,11 +262,11 @@ const services = [
           </div>
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/CertifiedDiabetes.png" alt="Certified" className="w-8 h-8 object-contain" />
-            <span>Certified Diabetes & Kidney Specialist</span>
+            <span>Consultant Physician & Diabetologist</span>
           </div>
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/5Years.png" alt="Experience" className="w-8 h-8 object-contain" />
-            <span>5+ Years Clinical Experience</span>
+            <span>5+ Years Clinical Experience as a Specialist</span>
           </div>
           <div className="flex items-center gap-2.5 text-sm text-[#5a5a5a] whitespace-nowrap">
             <img src="/assets/Academic.png" alt="Academic" className="w-8 h-8 object-contain" />
@@ -302,12 +304,16 @@ const services = [
           <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">Experienced. Evidence-Based.<br/>Patient-Focused.</h2>
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">A physician who combines clinical precision with genuine patient care.</p>
           
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 lg:gap-20">
+          {/* <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 md:gap-16 lg:gap-20">
             <div className="space-y-4 text-[14px] md:text-[16px] text-[#5a5a5a] leading-[1.85]">
               <p className="text-[15px] md:text-[17px] text-[#1a1a1a] font-semibold">Dr. Barla Dasaradha Ram, MD (General Medicine)<br/><span className="font-normal text-[#5a5a5a]">Consultant Physician | Special Interest in Diabetes & Metabolic Medicine</span></p>
-              <p>Dr. Barla Dasaradha Ram is a Consultant Physician at Vedic Health Clinic, PM Palem, Visakhapatnam, with focused expertise in diabetes, hypertension, thyroid disorders, and metabolic disease management.</p>
-              <p>He completed his MD in General Medicine from Dr. D.Y. Patil Medical College, Hospital & Research Centre, Pune, and holds advanced certifications in Evidence-Based Diabetes Management (CCEBDM) and Chronic Kidney Disease Management (CCCKD). He has also served as Assistant Professor in the Department of General Medicine at GITAM Institute of Medical Sciences, Visakhapatnam.</p>
-              <p>His practice at Vedic Health Clinic is built around structured, protocol-driven care — precise diagnosis, rational prescribing, and sustained follow-up — with a strong emphasis on preventing long-term complications of diabetes, hypertension, and metabolic disease.</p>
+              <p>Most patients with diabetes or hypertension see a doctor once a month, get a prescription, and leave with more questions than answers.</p>
+              <p>Dr. Dasaradha Ram built Vedic Health Clinic around a different model — protocol-driven management and the kind of clinical explanation that helps patients actually understand and control their condition.
+He completed his MD in General Medicine from Dr. D.Y. Patil Medical College, Hospital & Research Centre, Pune, and holds advanced certifications in Evidence-Based Diabetes Management (CCEBDM) and Chronic Kidney Disease Management (CCCKD).</p>
+              <p>He has served as Assistant Professor in the Department of General Medicine at GITAM Institute of Medical Sciences, Visakhapatnam — and brings the same evidence standards from academic medicine into every OPD consultation.</p>
+              <p>At Vedic Health Clinic, that means precise diagnosis, rational prescribing, and structured follow-up — not monthly prescriptions handed across a desk. Every patient leaves with a clear understanding of their condition, their targets, and exactly why they are being treated the way they are.</p>
+              <p className="text-[15px] md:text-[17px] text-[#1a1a1a] italic font-semibold mt-6">
+Early treatment. Fewer complications. Better life.</p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-9">
                 <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
@@ -332,6 +338,43 @@ const services = [
               <img src="/assets/HeroImg.jpeg" alt="Dr. Barla Dasaradha Ram" className="w-full h-full object-cover" />
             </div>
             
+          </div> */}
+          <div className="flex gap-10 md:gap-16 lg:gap-20">
+            <div className="space-y-4 text-[14px] md:text-[16px] text-[#5a5a5a] leading-[1.85]">
+              <p className="text-[15px] md:text-[17px] text-[#1a1a1a] font-semibold">Dr. Barla Dasaradha Ram, MD (General Medicine)<br/><span className="font-normal text-[#5a5a5a]">Consultant Physician | Special Interest in Diabetes & Metabolic Medicine</span></p>
+              <p>Most patients with diabetes or hypertension see a doctor once a month, get a prescription, and leave with more questions than answers.</p>
+              <p>Dr. Dasaradha Ram built Vedic Health Clinic around a different model — protocol-driven management and the kind of clinical explanation that helps patients actually understand and control their condition.
+He completed his MD in General Medicine from Dr. D.Y. Patil Medical College, Hospital & Research Centre, Pune, and holds advanced certifications in Evidence-Based Diabetes Management (CCEBDM) and Chronic Kidney Disease Management (CCCKD).</p>
+            <p>He has served as Assistant Professor in the Department of General Medicine at GITAM Institute of Medical Sciences, Visakhapatnam — and brings the same evidence standards from academic medicine into every OPD consultation.</p>
+            </div>
+            <div className="hidden lg:block bg-[#e6f4f4] rounded-lg overflow-hidden items-center justify-center m-auto w-[1200px] h-[350px]">
+              <img src="/assets/HeroImg.jpeg" alt="Dr. Barla Dasaradha Ram" className="w-[300px] h-[400px]" />
+            </div>
+            
+          </div>
+          <div className='space-y-4 text-[14px] md:text-[16px] text-[#5a5a5a] leading-[1.85]'>
+                <p>At Vedic Health Clinic, that means precise diagnosis, rational prescribing, and structured follow-up — not monthly prescriptions handed across a desk. Every patient leaves with a clear understanding of their condition, their targets, and exactly why they are being treated the way they are.</p>
+                <p className="text-[15px] md:text-[17px] text-[#1a1a1a] italic font-semibold mt-6">
+  Early treatment. Fewer complications. Better life.</p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-9">
+                  <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
+                    <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Specialisation</h4>
+                    <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">MD General Medicine | Internal Medicine | Diabetes, Hypertension, Thyroid  & Metabolic Disorders</p>
+                  </div>
+                  <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
+                    <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Certifications</h4>
+                    <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">CCEBDM <br/> CCCKD</p>
+                  </div>
+                  <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
+                    <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Academic Role</h4>
+                    <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Assistant Professor – General Medicine, GIMSR</p>
+                  </div>
+                  <div className="bg-[#e6f4f4] border-l-[3px] border-[#0d6e6e] p-4 rounded-r">
+                    <h4 className="text-[12px] md:text-[13px] font-semibold uppercase tracking-widest text-[#094f4f] mb-1">Clinic</h4>
+                    <p className="text-[13px] md:text-[14px] text-[#5a5a5a]">Vedic Health Clinic, PM Palem, Visakhapatnam</p>
+                  </div>
+                </div>
           </div>
         </div>
       </section>
@@ -344,24 +387,24 @@ const services = [
           <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Our Services</div>
           <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">What We Offer at Vedic<br/>Health Clinic</h2>
           <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-10 md:mt-13">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-5 mt-10 md:mt-13">
             {services.map((item, i) => (
                <div
                   key={i}
-                  className={`fade-up opacity-0 translate-y-7 transition-all duration-500 ${item.bg} rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 flex justify-between  min-h-[260px] overflow-hidden`}
+                  className={`fade-up opacity-0 translate-y-7 transition-all duration-500 ${item.bg} rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 flex justify-between h-[150px]  md:min-h-[260px] overflow-hidden`}
                 >
-                  <div className="flex flex-col justify-between">
+                  <div className="flex flex-col justify-between w-[80%] pr-4">
                     <div>
-                      <h3 className="text-[16px] font-semibold text-[#0b3c3c] mb-2">
+                      <h3 className="text-[17px] md:text-[18px] font-semibold text-[#0b3c3c] mb-2">
                         {item.title}
                       </h3>
 
-                      <p className="text-[13px] text-[#3f3f3f] leading-relaxed mb-4">
+                      <p className="text-[15px] md:text-[16px] text-[#3f3f3f] leading-relaxed mb-4">
                         {item.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="w-[240px] h-[240px] ">
+                  <div className=" ">
                     {item.Img}
                   </div>
                </div>
@@ -369,49 +412,63 @@ const services = [
           </div>
         </div>
       </section> */}
-      <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
-        <div className="max-w-[1120px] mx-auto">
-          <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3"><span className="w-6 h-[1px] bg-[#0d6e6e]"></span>Our Services</div>
-          <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">What We Offer at Vedic<br/>Health Clinic</h2>
-          <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">Comprehensive clinical services under one roof.</p>
-          <div className="mt-10 md:mt-13 space-y-6">
+      {/* check the flow */}
+     <section
+  id="services"
+  className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white"
+>
+  <div className="max-w-[1120px] mx-auto">
+    {/* HEADER */}
+    <div className="flex items-center gap-3 text-[#0d6e6e] text-xs font-medium uppercase tracking-widest mb-3">
+      <span className="w-6 h-[1px] bg-[#0d6e6e]"></span>
+      Our Services
+    </div>
+
+    <h2 className="text-[24px] md:text-[30px] lg:text-[clamp(30px,3.5vw,44px)] font-semibold text-[#1a1a1a] mb-3 md:mb-4">
+      What We Offer at Vedic <br /> Health Clinic
+    </h2>
+
+    <p className="text-[14px] md:text-[17px] text-[#5a5a5a] max-w-[520px] leading-relaxed mb-10 md:mb-13">
+      Comprehensive clinical services under one roof.
+    </p>
+
+   <div className="mt-10 md:mt-13 space-y-6">
 
   {/* ================= ROW 1 ================= */}
   <div className="flex flex-col lg:flex-row gap-5 w-full">
-
     {services.slice(0, 3).map((item, i) => (
       <div
         key={i}
         className={`
           group ${item.bg}
           rounded-2xl p-6 shadow-sm hover:shadow-xl
-          overflow-hidden flex justify-between
-          transition-all duration-500 ease-in-out
+          overflow-hidden
+          transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
 
-          /* 📱 Mobile + Tablet (NO ANIMATION) */
-          w-full h-[320px] md:h-[300px]
+          flex flex-col items-center
+          w-full h-auto md:h-[300px]
 
-          /* 🖥️ Desktop animation */
-          lg:h-[260px] lg:flex-1 lg:hover:flex-[2]
+          /* Desktop */
+          lg:h-[260px]
+          lg:flex-1
+          lg:hover:flex-[2]
+          lg:hover:flex-row
 
           min-w-0
         `}
       >
-
         {/* TEXT */}
-        <div className="flex flex-col justify-between w-[60%] min-w-0">
-
+        <div
+          className="
+            flex flex-col justify-between
+            w-full min-w-0
+            lg:group-hover:w-[60%]
+            transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+          "
+        >
           <div>
             {/* TITLE */}
-            <h3
-              className="
-                font-semibold text-[#0b3c3c] mb-2
-                text-[24px] md:text-[26px]
-                lg:text-[14px]
-                lg:group-hover:text-[16px]
-                transition-all duration-300
-              "
-            >
+            <h3 className="font-semibold text-[#0b3c3c] mb-2 text-[22px] md:text-[24px] lg:text-[18px] transition-all duration-300">
               {item.title}
             </h3>
 
@@ -419,67 +476,106 @@ const services = [
             <p
               className="
                 text-[#3f3f3f] leading-relaxed
-                text-[14px] md:text-[18px]
-                lg:text-[12px]
-                lg:group-hover:text-[14px]
-                transition-all duration-300
+                text-[14px] md:text-[16px]
+
+                lg:text-[16px]
+
+                /* Hidden */
+                lg:opacity-0
+                lg:translate-y-2
+                lg:max-h-0
+                lg:overflow-hidden
+
+                /* Smooth animation */
+                lg:transition-all
+                lg:duration-400
+                lg:delay-300
+                lg:ease-[cubic-bezier(0.4,0,0.2,1)]
+
+                /* On hover */
+                lg:group-hover:opacity-100
+                lg:group-hover:translate-y-0
+                lg:group-hover:max-h-[300px]
+                lg:group-hover:mt-2
               "
             >
               {item.desc}
             </p>
           </div>
-
         </div>
 
         {/* IMAGE */}
-        <div className="flex items-center justify-end flex-shrink-0 h-full w-[40%]">
-          <div className="w-full h-full max-w-[240px]">
-            {item.Img}
+        <div
+          className="
+            flex items-center justify-center flex-shrink-0
+
+            /* Mobile */
+            w-full mt-4
+            h-[140px] md:h-[160px]
+
+            /* Desktop */
+            lg:mt-0
+            lg:h-full
+            lg:w-full
+
+            /* Move right on hover */
+            lg:group-hover:w-[40%]
+            lg:group-hover:justify-end
+
+            transition-all duration-500
+          "
+        >
+          <div
+            className="
+              w-full h-full
+              max-w-[160px] md:max-w-[180px] lg:max-w-[220px]
+              mx-auto lg:mx-0
+            "
+          >
+            <div className="w-full h-full object-contain">
+              {item.Img}
+            </div>
           </div>
         </div>
-
       </div>
     ))}
-
   </div>
-
 
   {/* ================= ROW 2 ================= */}
   <div className="flex flex-col lg:flex-row gap-5 w-full">
-
     {services.slice(3).map((item, i) => (
       <div
         key={i}
         className={`
           group ${item.bg}
           rounded-2xl p-6 shadow-sm hover:shadow-xl
-          overflow-hidden flex justify-between
-          transition-all duration-500 ease-in-out
+          overflow-hidden
+          transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
 
-          /* 📱 Mobile + Tablet (NO ANIMATION) */
-          w-full h-[320px] md:h-[300px]
+          flex flex-col items-center
+          w-full h-auto md:h-[300px]
 
-          /* 🖥️ Desktop */
-          lg:h-[260px] lg:flex-1 lg:hover:flex-[2]
+          /* Desktop */
+          lg:h-[260px]
+          lg:flex-1
+          lg:hover:flex-[2]
+          lg:hover:flex-row
 
           min-w-0
         `}
       >
-
         {/* TEXT */}
-        <div className="flex flex-col justify-between w-[60%] min-w-0">
-
+        <div
+          className="
+            flex flex-col justify-between
+            w-full min-w-0
+            lg:group-hover:w-[60%]
+            transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+          "
+        >
           <div>
             {/* TITLE */}
-            <h3
-              className="
-                font-semibold text-[#0b3c3c] mb-2
-                text-[24px] md:text-[26px]
-                lg:text-[14px]
-                lg:group-hover:text-[16px]
-                transition-all duration-300
-              "
-            >
+            <h3 className="font-semibold text-[#0b3c3c] mb-2 text-[22px] md:text-[24px] lg:text-[18px] transition-all duration-300">
               {item.title}
             </h3>
 
@@ -487,33 +583,68 @@ const services = [
             <p
               className="
                 text-[#3f3f3f] leading-relaxed
-                text-[14px] md:text-[18px]
-                lg:text-[12px]
-                lg:group-hover:text-[14px]
-                transition-all duration-300
+                text-[14px] md:text-[16px]
+
+                lg:text-[16px]
+
+                lg:opacity-0
+                lg:translate-y-2
+                lg:max-h-0
+                lg:overflow-hidden
+
+                lg:transition-all
+                lg:duration-400
+                lg:delay-300
+                lg:ease-[cubic-bezier(0.4,0,0.2,1)]
+
+                lg:group-hover:opacity-100
+                lg:group-hover:translate-y-0
+                lg:group-hover:max-h-[300px]
+                lg:group-hover:mt-2
               "
             >
               {item.desc}
             </p>
           </div>
-
         </div>
 
         {/* IMAGE */}
-        <div className="flex items-center justify-end flex-shrink-0 h-full w-[40%]">
-          <div className="w-full h-full max-w-[260px]">
-            {item.Img}
+        <div
+          className="
+            flex items-center justify-center flex-shrink-0
+
+            w-full mt-4
+            h-[140px] md:h-[160px]
+
+            lg:mt-0
+            lg:h-full
+            lg:w-full
+
+            lg:group-hover:w-[40%]
+            lg:group-hover:justify-end
+
+            transition-all duration-500
+          "
+        >
+          <div
+            className="
+              w-full h-full
+              max-w-[160px] md:max-w-[180px] lg:max-w-[220px]
+              mx-auto lg:mx-0
+            "
+          >
+            <div className="w-full h-full object-contain">
+              {item.Img}
+            </div>
           </div>
         </div>
-
       </div>
     ))}
-
   </div>
 
 </div>
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* V2 */}
       {/* <section id="services" className="py-12 md:py-16 lg:py-24 px-5 md:px-8 lg:px-10 bg-white">
@@ -559,11 +690,11 @@ const services = [
 
           <div className="flex flex-col justify-between min-w-0">
             <div>
-              <h3 className="text-[16px] font-semibold text-[#0b3c3c] mb-2">
+              <h3 className="md:text-[18px] text-[16px] font-semibold text-[#0b3c3c] mb-2">
                 {item.title}
               </h3>
 
-              <p className="text-[13px] text-[#3f3f3f] leading-relaxed">
+              <p className="text-[13px] md:text-[15px] text-[#3f3f3f] leading-relaxed">
                 {item.desc}
               </p>
             </div>
@@ -629,14 +760,14 @@ const services = [
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MD – General Medicine <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2021</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pune</div>
-                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#d1efe4] text-[#388362] border border-[#9fe0c7] px-2 py-1 rounded">Specialization</span>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">MBBS <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2013</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Guntur Medical College & Government General Hospital (GGH), Guntur</div>
-                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Degree</span>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#d1efe4] text-[#388362] border border-[#9fe0c7] px-2 py-1 rounded">Degree</span>
               </div>
               
               <div className="mt-8 mb-2">
@@ -647,51 +778,56 @@ const services = [
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCCKD <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2025</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Chronic Kidney Disease Management</div>
-                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#d1efe4] text-[#388362] border border-[#9fe0c7] px-2 py-1 rounded">Certification</span>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
                 <div className="absolute w-2 h-2 bg-[#0d6e6e] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">CCEBDM <span className="text-[#094f4f] font-semibold ml-1 text-[13px]">2023</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Certificate Course in Evidence-Based Diabetes Management</div>
-                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Certification</span>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#d1efe4] text-[#388362] border border-[#9fe0c7] px-2 py-1 rounded">Certification</span>
               </div>
             </div>
             
             {/* EXPERIENCE */}
             <div>
               <h3 className="text-[18px] md:text-[22px] font-semibold text-[#1a1a1a] mb-6 md:mb-8 pb-4 border-b-2 border-[#f7f0e3] flex items-center gap-2.5">
-                <span className="w-7 h-7 bg-[#b5893a] rounded-full flex-shrink-0"></span>
+                <span className="w-7 h-7 bg-[#6EA400] rounded-full flex-shrink-0"></span>
                 Experience
               </h3>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
-                <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
-                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Consultant Physician <span className="text-[#b5893a] font-semibold ml-1">Since 2021</span></div>
+                {/* <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5"></div> */}
+                {/* <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5 animate-pulse"></div> */}
+                <div className="absolute -left-[6px] top-1.5 flex items-center justify-center">
+  <span className="absolute inline-flex h-3 w-3 rounded-full bg-[#6EA400] opacity-75 animate-ping"></span>
+  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#6EA400]"></span>
+</div>
+                <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Consultant Physician <span className="text-[#6EA400] font-semibold ml-1">Since 2021</span></div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a] mb-2">Vedic Health Clinic, PM Palem, Visakhapatnam</div>
-                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#f7f0e3] text-[#b5893a] border border-[#e8d5aa] px-2 py-1 rounded">Current</span>
+                <span className="inline-block text-[10px] md:text-[11px] font-semibold uppercase tracking-widest bg-[#d1efe4] text-[#388362] border border-[#9fe0c7] px-2 py-1 rounded">Current</span>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
-                <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
+                <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Assistant Professor – General Medicine</div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences and Research (GIMSR), Rushikonda Visakhapatnam</div>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
-                <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
+                <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Senior Resident – General Medicine</div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">GITAM Institute of Medical Sciences and Research (GIMSR), Rushikonda Visakhapatnam</div>
               </div>
               
               <div className="relative pl-6 pb-7 border-l-2 border-[#e6f4f4]">
-                <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
+                <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Junior Resident – General Medicine</div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">Padmashree Dr. D. Y. Patil Medical College, Hospital & Research Centre, Pimpri, Pune</div>
               </div>
               
               <div className="relative pl-6 border-l-2 border-transparent">
-                <div className="absolute w-2 h-2 bg-[#b5893a] rounded-full -left-[5px] top-1.5"></div>
+                <div className="absolute w-2 h-2 bg-[#6EA400] rounded-full -left-[5px] top-1.5"></div>
                 <div className="text-[14px] md:text-[15px] font-semibold text-[#1a1a1a] mb-1">Internship</div>
                 <div className="text-[13px] md:text-[14px] text-[#5a5a5a]">Government General Hospital (GGH), Guntur</div>
               </div>
